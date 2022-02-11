@@ -47,34 +47,11 @@ try
 	            $_SESSION['userNotExist'] = true;
 	            header("location: index.php");
 	        }
-	    }
-	    else
-	    {
-	    	$sql= "CREATE TABLE IF NOT EXISTS users
-	    	(
-	    		id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-	    		imie VARCHAR(30) NOT NULL,
-	    		nazwisko VARCHAR(30) NOT NULL,
-	    		email VARCHAR(30) NOT NULL,
-	    		haslo VARCHAR(30) NOT NULL,
-	    		email VARCHAR(30) NOT NULL,
-	    		data_rejestracji timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-	    	)";
-
-// 	    	$test= "CREATE TABLE MyGuests (
-// id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-// firstname VARCHAR(30) NOT NULL,
-// lastname VARCHAR(30) NOT NULL,
-// email VARCHAR(50),
-// reg_date TIMESTAMP
-// )";
-
-	    	if($connect->query($sql))
-	    		echo 'Tabela została utworzona';
-	    	else
-	    		echo 'Nie udało się utworzyć tabeli';
-	    }
-	    
+	    } 
+		else
+		{
+			echo "Błąd wykoania zapytania";
+		}
 	    $connect->close();
 	}
 }

@@ -47,10 +47,12 @@ if(isset($_SESSION['signedIn']) && ($_SESSION['signedIn'] == true))
 			        <form method="post" action="login.php">
 						<div class="form-group">
 						    <label for="exampleInputEmail1">Wprowadź adres email</label>
+							<p><small>DEMO: "marek@nowak.pl"</small></p>
 						    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Adres email" name="email" required>
 					  	</div>
 					  	<div class="form-group">
 					    	<label for="exampleInputPassword1">Wprowadź hasło</label>
+							<p><small>DEMO: "haslo123"</small></p>
 					    	<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Hasło" name="password" required>
 						</div>
 						
